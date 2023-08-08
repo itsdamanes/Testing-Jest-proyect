@@ -6,15 +6,35 @@ let valueInEuro = {
 }
 
 // declaramos una   funcion con el mismo nombre "fromEuroToDollar"
-function fromEuroToDollar (valueInEuro){
+const fromEuroToDollar = (cantidadEuro) => {
     // convertimos el valor a dolares
-    let valueInDollar = valueInEuro * 1.2;
+    let valueInDollar = cantidadEuro * 1.2;
     // retornamos el valor
     return valueInDollar;
 }
 
-console.log(fromEuroToDollar(70))
-module.exports = { fromEuroToDollar }
+console.log(fromEuroToDollar(5))
+
+// declaramos una   funcion con el mismo nombre "fromEuroToYen"
+const fromEuroToYen = (cantidadYen) => {
+    // convertimos el valor a Yenes
+    let valueInYen = cantidadYen * 127.9;
+    // retornamos el valor
+    return valueInYen;
+}
+
+console.log(fromEuroToYen(2))
+
+
+// declaramos una   funcion con el mismo nombre "fromEuroToYen"
+const fromEuroToPound = (cantidadPound) => {
+    // convertimos el valor a Yenes
+    let valueInPound = cantidadPound * 0.8;
+    // retornamos el valor
+    return valueInPound;
+}
+
+console.log(fromEuroToPound(2))
 
 //const fromDollarToYen = function(valueInDollar) {
     
@@ -36,5 +56,4 @@ console.log(sum(7,3))
 
 // exporta la función para usarla en otros archivos 
 // (similar a la palabra clave `export` cuando se usa webpack)
-module.exports = { sum };
-
+module.exports = { sum, fromEuroToDollar, fromEuroToYen, fromEuroToPound };
